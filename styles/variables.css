@@ -1,7 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --regular-font-family: Inter;
-  --accent-font-family: PressStart2p;
+  --regular-font-family: "Inter", sans-serif;
+  --accent-font-family: "PressStart2P", fantasy;
   --background-gradient: 
     repeating-linear-gradient(
       to right,
@@ -27,7 +27,7 @@
   --heart-contour-color: #000;
   --heart-sparks-color: #ff0000;
   --page-text-collor: #000;
-  --border: 2px solid #000000;
+  --border: 2px solid #000;
   --logo-title-dynamic-font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
   --logo-subtitle-dynamic-font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
   --background-color-backdrop: #000;
