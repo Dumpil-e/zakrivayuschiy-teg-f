@@ -204,7 +204,7 @@
   z-index: -1;
   background-color: #000000;
   transition: transform 0.5s ease-in-out;
-  transform: scaleX(0);  
+  transform: scaleX(0);
   transform-origin: left;
   inline-size: 100%;
   block-size: 100%;
@@ -280,12 +280,12 @@
 
   .footer__button-icon {
     inline-size: 28px;
-    block-size: 28px;  
+    block-size: 28px;
   }
 
   .modal {
     max-inline-size: 341px;
-    padding: 30px 40px; 
+    padding: 30px 40px;
   }
 }
 
