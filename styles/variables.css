@@ -31,5 +31,5 @@
   --logo-title-dynamic-font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
   --logo-subtitle-dynamic-font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
   --background-color-backdrop: #000;
-  --difference-color: #fff
+  --difference-color: #fff;
 }

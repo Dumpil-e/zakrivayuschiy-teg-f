@@ -41,14 +41,14 @@
 
 .page {
   min-inline-size: 320px;
-  min-block-size: 100dvb;  
-  background-image: var(--background-gradient); 
+  min-block-size: 100dvb;
+  background-image: var(--background-gradient);
   background-size: cover;
   background-attachment: fixed;
   font-family: var(--regular-font-family);
   font-size: 18px;
   font-variation-settings: 'wght' 410;
-  padding-block: 100px; 
+  padding-block: 100px;
 }
 
 .logo {
@@ -62,7 +62,7 @@
   flex-direction: column;
   row-gap: 20px;
   align-items: center;
-  border: var(--border);  
+  border: var(--border);
 }
 
 .logo__title {
@@ -78,9 +78,9 @@
 
 .content {
   width: var(--pade-width);
-  margin-inline: auto;  
+  margin-inline: auto;
   margin-block-start: 100px;
-  margin-block-end: 50px;  
+  margin-block-end: 50px;
 }
 
 .card-list {
@@ -105,28 +105,29 @@
 .card__image-block {
   position: relative;
   /* Фиксит выход блюра за пределы изображения */
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .card__image-label {
   position: absolute;
+  z-index: 1;
   inset-inline-end: 25px;
   inset-block-start: 25px;
   font-family: var(--accent-font-family);
   font-size: 14px;
   text-transform: uppercase;
   opacity: 0.5;
-  mix-blend-mode: hard-light;  
-  -webkit-text-stroke: 1px #FFFFFF;
+  mix-blend-mode: hard-light;
+  -webkit-text-stroke: 1px var(--page-background-color);
 }
 
-.card__image {  
+.card__image {
   display: block;
   inline-size: 100%;
   object-fit: cover;
   object-position: center;
   aspect-ratio: 1 / 1;
-  border: var(--border);  
+  border: var(--border);
 }
 
 .card__description {
@@ -146,7 +147,7 @@
   gap: 5px;
 }
 
-.card__icon-button { 
+.card__icon-button {
   border: 2px solid transparent;
   padding: 0;
   background: transparent;
@@ -154,9 +155,9 @@
   cursor: pointer;
 }
 
-.like-icon {  
+.like-icon {
   inline-size: 35px;
-  block-size: 30px;   
+  block-size: 30px;
   background-color: var(--page-background-color);
 }
 
@@ -164,7 +165,7 @@
   font-family: var(--accent-font-family);
   line-height: 90%;
   font-size: 14px;
-  font-weight: 400;  
+  font-weight: 400;
   padding-inline: 35px;
   padding-block: 10px;
   background-color: transparent;
@@ -172,11 +173,10 @@
 }
 
 .footer {
-  display: flex;    
+  display: flex;
   align-items: center;
   justify-content: center;
 }
-
 
 .button {
   position: relative;
@@ -184,9 +184,9 @@
   font-family: var(--accent-font-family);
   line-height: 90%;
   font-size: 14px;
-  font-weight: 400; 
+  font-weight: 400;
   background-color: var(--page-background-color);
-  transition: box-shadow 0.3s ease;  
+  transition: box-shadow 0.3s ease;
 }
 
 .button:focus {
@@ -207,7 +207,7 @@
   transform: scaleX(0);  
   transform-origin: left;
   inline-size: 100%;
-  block-size: 100%;    
+  block-size: 100%;
 }
 
 .button__text,
@@ -220,7 +220,7 @@
   transform: scaleX(1);
 }
 
-.footer__button {  
+.footer__button {
   display: flex;
   gap: 8px;
   padding-inline: 18px;
@@ -234,16 +234,16 @@
 
 .footer__button-icon {
   inline-size: 21px;
-  block-size: 21px;  
+  block-size: 21px;
 }
 
 .modal {
   max-inline-size: 355px;
-  padding: 30px; 
+  padding: 30px;
 }
 
 .modal::backdrop {
-  opacity: 0.75;  
+  opacity: 0.75;
   background-color: var(--background-color-backdrop);
 }
 
@@ -262,7 +262,7 @@
 .modal__icon {
   flex-shrink: 0;
   inline-size: 39px;
-  block-size: 39px; 
+  block-size: 39px;
 }
 
 .modal__button {
@@ -275,17 +275,24 @@
 @media (width < 376px) {
   .footer__button {
     flex-direction: column;
-    align-items: center;      
+    align-items: center;
   }
+
   .footer__button-icon {
     inline-size: 28px;
     block-size: 28px;  
   }
+
   .modal {
     max-inline-size: 341px;
     padding: 30px 40px; 
   }
+}
 
+@supports not ((-webkit-text-stroke: 1px var(--page-background-color)) or (text-stroke: 1px var(--page-background-color, #ffffff))) {
+  .card__image-label {
+    text-shadow: 0 0 1px var(--page-background-color);
+  }
 }
 
    
