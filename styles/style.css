@@ -10,7 +10,282 @@
 
 */
 
+.filter-grayscale {
+  filter: grayscale(70%);
+}
+
+.filter-blur {
+  filter: blur(10px);
+}
+
+.filter-hue-rotate {
+  filter: hue-rotate(30deg);
+}
+
+.filter-saturate {
+  filter: saturate(4)
+}
+
+.filter-invert {
+  filter: invert(0.8)
+}
+
+.filter-contrast {
+  filter: contrast(30%)
+}
+
+.filter-multiplier {
+  /* убираем все лишнее с картинки и делаем из нее грузовичек на фоне ночного неба */
+  filter: grayscale(90%) hue-rotate(256deg) contrast(20) saturate(10%);
+}
+
 .page {
   min-inline-size: 320px;
-  min-block-size: 100dvb;
+  min-block-size: 100dvb;  
+  background-image: var(--background-gradient); 
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: var(--regular-font-family);
+  font-size: 18px;
+  font-variation-settings: 'wght' 410;
+  padding-block: 100px; 
 }
+
+.logo {
+  font-family: var(--accent-font-family);
+  background-color: var(--page-background-color);
+  padding-block: clamp(7.625rem, 7.449rem + 0.751vw, 8.125rem);
+  padding-inline: clamp(1rem, -1.344rem + 10vw, 7.656rem);
+  width: var(--pade-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: center;
+  border: var(--border);  
+}
+
+.logo__title {
+  text-transform: uppercase;
+  font-size: var(--logo-title-dynamic-font-size);
+  font-weight: 400;
+}
+
+.logo__subtitle {
+  text-transform: uppercase;
+  font-size: var(--logo-subtitle-dynamic-font-size);
+}
+
+.content {
+  width: var(--pade-width);
+  margin-inline: auto;  
+  margin-block-start: 100px;
+  margin-block-end: 50px;  
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+
+.card {
+  background-color: var(--page-background-color);
+  border: var(--border);
+}
+
+.card__title {
+  font-size: 18px;
+  font-variation-settings: 'wght' 710;
+  padding-inline: 10px;
+  padding-block: 4px;
+  border-block-end: var(--border);
+}
+
+.card__image-block {
+  position: relative;
+  /* Фиксит выход блюра за пределы изображения */
+  overflow: hidden; 
+}
+
+.card__image-label {
+  position: absolute;
+  inset-inline-end: 25px;
+  inset-block-start: 25px;
+  font-family: var(--accent-font-family);
+  font-size: 14px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  mix-blend-mode: hard-light;  
+  -webkit-text-stroke: 1px #FFFFFF;
+}
+
+.card__image {  
+  display: block;
+  inline-size: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1 / 1;
+  border: var(--border);  
+}
+
+.card__description {
+  padding: 25px 25px 23.5px 25px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  border-block-start: var(--border);
+  line-height: 21px;
+}
+
+.card__footer {
+  display: flex;
+  justify-content: end;
+  padding-inline: 25px;
+  padding-block-end: 25px;
+  gap: 5px;
+}
+
+.card__icon-button { 
+  border: 2px solid transparent;
+  padding: 0;
+  background: transparent;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.like-icon {  
+  inline-size: 35px;
+  block-size: 30px;   
+  background-color: var(--page-background-color);
+}
+
+.card__like-button {
+  font-family: var(--accent-font-family);
+  line-height: 90%;
+  font-size: 14px;
+  font-weight: 400;  
+  padding-inline: 35px;
+  padding-block: 10px;
+  background-color: transparent;
+  transition: box-shadow 0.3s ease;
+}
+
+.footer {
+  display: flex;    
+  align-items: center;
+  justify-content: center;
+}
+
+
+.button {
+  position: relative;
+  z-index: 1;
+  font-family: var(--accent-font-family);
+  line-height: 90%;
+  font-size: 14px;
+  font-weight: 400; 
+  background-color: var(--page-background-color);
+  transition: box-shadow 0.3s ease;  
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0px 0px #000000;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: #000000;
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);  
+  transform-origin: left;
+  inline-size: 100%;
+  block-size: 100%;    
+}
+
+.button__text,
+.footer__button-icon {
+  color: var(--difference-color);
+  mix-blend-mode: difference;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.footer__button {  
+  display: flex;
+  gap: 8px;
+  padding-inline: 18px;
+  padding-block: 15px;
+  transition: box-shadow 0.3s ease;
+}
+
+.footer__button-text {
+  align-self: center;
+}
+
+.footer__button-icon {
+  inline-size: 21px;
+  block-size: 21px;  
+}
+
+.modal {
+  max-inline-size: 355px;
+  padding: 30px; 
+}
+
+.modal::backdrop {
+  opacity: 0.75;  
+  background-color: var(--background-color-backdrop);
+}
+
+.modal__content {
+  font-family: var(--accent-font-family);
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 150%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding-block-end: 30px;
+}
+
+.modal__icon {
+  flex-shrink: 0;
+  inline-size: 39px;
+  block-size: 39px; 
+}
+
+.modal__button {
+  width: 100%;
+  padding-block: 12.5px;
+  text-transform: uppercase;
+  transition: box-shadow 0.3s ease;
+}
+
+@media (width < 376px) {
+  .footer__button {
+    flex-direction: column;
+    align-items: center;      
+  }
+  .footer__button-icon {
+    inline-size: 28px;
+    block-size: 28px;  
+  }
+  .modal {
+    max-inline-size: 341px;
+    padding: 30px 40px; 
+  }
+
+}
+
+   

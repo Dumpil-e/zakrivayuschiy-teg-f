@@ -1,1 +1,35 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --regular-font-family: Inter;
+  --accent-font-family: PressStart2p;
+  --background-gradient: 
+    repeating-linear-gradient(
+      to right,
+      #d3d3d3 0px,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #d3d3d3 0px,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(
+      to bottom,
+      #e7e7e7 0.01%,
+      #1a1a1a 100%
+    );
+  --page-background-color: #fff;
+  --pade-width: clamp(23.438rem, 16.285rem + 30.516vw, 43.75rem);
+  --heart-contour-color: #000;
+  --heart-sparks-color: #ff0000;
+  --page-text-collor: #000;
+  --border: 2px solid #000000;
+  --logo-title-dynamic-font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
+  --logo-subtitle-dynamic-font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
+  --background-color-backdrop: #000;
+  --difference-color: #fff
+}
