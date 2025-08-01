@@ -44,8 +44,8 @@
               </p>
             </div>
             <footer class="card__footer">
-              <button class="card__icon-button">
-                <svg class="like-icon" viewBox="0 0 39 29">
+              <button type="button" class="card__icon-button">
+                <svg class="like-icon" viewBox="0 0 39 39">
                   <g class="heart">
                     <path
                       class="contour"
@@ -70,7 +70,7 @@
                   </g>
                 </svg>
               </button>
-              <button class="button card__like-button">
+              <button type="button" class="button card__like-button">
                 <span class="button__text">Like</span>
               </button>
             </footer>
@@ -103,8 +103,8 @@
               </p>
             </div>
             <footer class="card__footer">
-              <button class="card__icon-button">
-                <svg class="like-icon" viewBox="0 0 39 29">
+              <button type="button" class="card__icon-button">
+                <svg class="like-icon" viewBox="0 0 39 39">
                   <g class="heart">
                     <path
                       class="contour"
@@ -129,7 +129,7 @@
                   </g>
                 </svg>
               </button>
-              <button class="button card__like-button">
+              <button type="button" class="button card__like-button">
                 <span class="button__text">Like</span>
               </button>
             </footer>
@@ -160,7 +160,7 @@
             </div>
             <footer class="card__footer">
               <button class="card__icon-button">
-                <svg class="like-icon" viewBox="0 0 39 29">
+                <svg class="like-icon" viewBox="0 0 39 39">
                   <g class="heart">
                     <path
                       class="contour"
@@ -185,7 +185,7 @@
                   </g>
                 </svg>
               </button>
-              <button class="button card__like-button">
+              <button type="button" class="button card__like-button">
                 <span class="button__text">Like</span>
               </button>
             </footer>
@@ -217,8 +217,8 @@
               </p>
             </div>
             <footer class="card__footer">
-              <button class="card__icon-button">
-                <svg class="like-icon" viewBox="0 0 39 29">
+              <button type="button" class="card__icon-button">
+                <svg class="like-icon" viewBox="0 0 39 39">
                   <g class="heart">
                     <path
                       class="contour"
@@ -243,7 +243,7 @@
                   </g>
                 </svg>
               </button>
-              <button class="button card__like-button">
+              <button type="button" class="button card__like-button">
                 <span class="button__text">Like</span>
               </button>
             </footer>
@@ -276,8 +276,8 @@
               </p>
             </div>
             <footer class="card__footer">
-              <button class="card__icon-button">
-                <svg class="like-icon" viewBox="0 0 39 29">
+              <button type="button" class="card__icon-button">
+                <svg class="like-icon" viewBox="0 0 39 39">
                   <g class="heart">
                     <path
                       class="contour"
@@ -302,7 +302,7 @@
                   </g>
                 </svg>
               </button>
-              <button class="button card__like-button">
+              <button type="button" class="button card__like-button">
                 <span class="button__text">Like</span>
               </button>
             </footer>
@@ -332,8 +332,8 @@
               </p>
             </div>
             <footer class="card__footer">
-              <button class="card__icon-button">
-                <svg class="like-icon" viewBox="0 0 39 29">
+              <button type="button" class="card__icon-button">
+                <svg class="like-icon" viewBox="0 0 39 39">
                   <g class="heart">
                     <path
                       class="contour"
@@ -358,7 +358,7 @@
                   </g>
                 </svg>
               </button>
-              <button class="button card__like-button">
+              <button type="button" class="button card__like-button">
                 <span class="button__text">Like</span>
               </button>
             </footer>
@@ -390,8 +390,8 @@
               </p>
             </div>
             <footer class="card__footer">
-              <button class="card__icon-button">
-                <svg class="like-icon" viewBox="0 0 39 29">
+              <button type="button" class="card__icon-button">
+                <svg class="like-icon" viewBox="0 0 39 39">
                   <g class="heart">
                     <path
                       class="contour"
@@ -416,7 +416,7 @@
                   </g>
                 </svg>
               </button>
-              <button class="button card__like-button">
+              <button type="button" class="button card__like-button">
                 <span class="button__text">Like</span>
               </button>
             </footer>
@@ -450,8 +450,8 @@
               </p>
             </div>
             <footer class="card__footer">
-              <button class="card__icon-button">
-                <svg class="like-icon" viewBox="0 0 39 29">
+              <button type="button" class="card__icon-button">
+                <svg class="like-icon" viewBox="0 0 39 39">
                   <g class="heart">
                     <path
                       class="contour"
@@ -476,28 +476,29 @@
                   </g>
                 </svg>
               </button>
-              <button class="button card__like-button">
+              <button type="button" class="button card__like-button">
                 <span class="button__text">Like</span>
               </button>
             </footer>
           </article>
         </li>
       </ul>
-    </main>
-    <footer class="footer">
-      <button
-        type="button"
-        onclick="window.modal.showModal()"
-        class="button footer__button"
-      >
-        <svg class="footer__button-icon" viewBox="0 0 23 23">
-          <use href="./svg/floppy.svg#floppy" />
-        </svg>
-        <span class="footer__button-text button__text"
-          >Сохранить на память</span
+      <div class="save-block">
+        <button
+          type="button"
+          onclick="window.modal.showModal()"
+          class="button save-block__button"
         >
-      </button>
-    </footer>
+          <svg class="save-block__button-icon" viewBox="0 0 23 23">
+            <use href="./svg/floppy.svg#floppy" />
+          </svg>
+          <span class="save-block__button-text button__text"
+            >Сохранить на память</span
+          >
+        </button>
+      </div>
+    </main>
+
     <dialog class="modal" id="modal">
       <div class="modal__content">
         <svg class="modal__icon" viewBox="0 0 22 22">
