@@ -140,7 +140,7 @@
 
 .card__footer {
   display: flex;
-  justify-content: end;  
+  justify-content: end;
   align-items: center;
   padding-inline: 25px;
   padding-block-end: 25px;
@@ -172,7 +172,7 @@
   font-family: var(--accent-font-family);
   line-height: 90%;
   font-size: 14px;
-  font-weight: 400;  
+  font-weight: 400;
   min-inline-size: 130px;
   min-block-size: 38px;
   padding-block: 10px;
@@ -184,7 +184,7 @@
   margin-block-start: 50px;
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
 }
 
 .button {
@@ -299,7 +299,7 @@
 }
 
 @supports ((-webkit-text-stroke: 1px var(--page-background-color)) or (text-stroke: 1px var(--page-background-color, #ffffff))) {
-  .card__image-label {    
+  .card__image-label {
     -webkit-text-stroke: 1px var(--page-background-color);
   }
 }
