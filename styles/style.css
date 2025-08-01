@@ -79,8 +79,7 @@
 .content {
   width: var(--pade-width);
   margin-inline: auto;
-  margin-block-start: 96px;
-  margin-block-end: 50px;
+  margin-block-start: 96px;  
 }
 
 .card-list {
@@ -304,5 +303,3 @@
     -webkit-text-stroke: 1px var(--page-background-color);
   }
 }
-
-   
