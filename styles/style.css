@@ -169,6 +169,7 @@
 }
 
 .card__icon-button:focus {
+  outline: none;
   border: var(--border);
 }
 
